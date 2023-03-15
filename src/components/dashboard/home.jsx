@@ -1,10 +1,10 @@
 import { Component } from "react";
-import "../App.css";
 
-import NavBar from "./nav";
-import Footer from "./footer";
 
-class Main extends Component {
+import NavBar from "../nav";
+import Footer from "../footer";
+
+class Home extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,7 +42,6 @@ class Main extends Component {
         <NavBar />
         <header class=" max-w-screen-full h-96">
           <div class="container flex flex-col px-4 py-6 mx-auto  lg:h-[28rem] lg:py-8 lg:flex-row lg:items-center">
-            
             <div class="">
               <img
                 class="w-auto h-auto"
@@ -86,7 +85,7 @@ class Main extends Component {
               </div>
             </div>
 
-            {/* second card */}
+           
 
             <div class="flex flex-col items-center justify-start w-full max-w-sm mx-auto py-2">
               <div class=" card2 w-full h-72 mt-16 bg-white  cursor-pointer  rounded-lg hover:shadow-md hover:shadow-white-500">
@@ -112,7 +111,7 @@ class Main extends Component {
               </div>
             </div>
 
-            {/* third card */}
+           
             <div class="flex flex-col items-center justify-start w-full max-w-sm mx-auto py-2">
               <div class=" card2 w-full h-72 mt-16 bg-white  cursor-pointer  rounded-lg hover:shadow-md hover:shadow-white-500">
                 <img
@@ -166,7 +165,7 @@ class Main extends Component {
               </div>
             </div>
 
-            {/* second card */}
+           
 
             <div class="flex flex-col items-center justify-start w-full max-w-sm mx-auto py-2">
               <div class=" card1 w-full h-80 mt-16 bg-white  bg-cover cursor-pointer rounded-lg hover:shadow-md hover:shadow-white-500">
@@ -186,7 +185,7 @@ class Main extends Component {
                 </span>
               </div>
             </div>
-            {/* third card */}
+         
             <div class="flex flex-col items-center justify-start w-full max-w-sm mx-auto py-2">
               <div class=" card1 w-full h-80 mt-16 bg-white  bg-cover cursor-pointer rounded-lg hover:shadow-md hover:shadow-white-500">
                 <h1 class="text-black dark:text-white  mt-2 font-semibold capitalize">
@@ -214,4 +213,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Home;

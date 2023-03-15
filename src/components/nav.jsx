@@ -14,28 +14,28 @@ class NavBar extends Component{
 			<div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
 				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
 				  <li class="mr-0.5">
-					<Link className="inline-block py-2 px-4 text-black cursor-pointer hover:text-orange-500 no-underline" to="/">Home</Link>
+					<Link className="inline-block py-2 px-4 text-black cursor-pointer hover:text-orange-500 no-underline" to="/home">Home</Link>
 				  </li>
                   <li class="mr-0.5">
-					<Link className="inline-block py-2 px-4 text-black hover:text-orange-500 no-underline" to="/store">Packs</Link>
+					<Link className="inline-block py-2 px-4 text-black hover:text-orange-500 no-underline" to="/table">Packs</Link>
 				  </li>
 
                   <li class="mr-0.5">
 					<Link className="inline-block py-2 px-4 text-black no-underline hover:text-orange-500 " to="/device">Devices</Link>
 				  </li>
 				  <li class="mr-8 ml-0.5">
-				  <Link className="inline-block py-2 px-4 text-black cursor-pointer hover:text-orange-500 no-underline" to="/">Bundle Price</Link>
+				  <Link className="inline-block py-2 px-4 text-black cursor-pointer hover:text-orange-500 no-underline" to="/price">Bundle Price</Link>
 				  </li>
 				  <img class=" w-60 h-5 max-w-3xl  font-semibold  capitalize" src="http://www.mango4g.rw/images/logo_new.png" alt=""></img>
                   <li class="mr-0.5 ml-8 ">
-					<Link className="inline-block py-2 px-4 text-black hover:text-orange-500 no-underline" to="/store">Balance Checking</Link>
+					<Link className="inline-block py-2 px-4 text-black hover:text-orange-500 no-underline" to="/balance">Balance Checking</Link>
 				  </li>
 
                   <li class="mr-0.5">
-					<Link className="inline-block py-2 px-4 text-black no-underline hover:text-orange-500 " to="">Shop Finder</Link>
+					<Link className="inline-block py-2 px-4 text-black no-underline hover:text-orange-500 " to="/shop">Shop Finder</Link>
 				  </li>
 				  <li class="m-0">
-					<Link className="inline-block py-2 px-4 text-black hover:text-orange-500 no-underline" to="/store">Recharge</Link>
+					<Link className="inline-block py-2 px-4 text-black hover:text-orange-500 no-underline" to="/recharge">Recharge</Link>
 				  </li>
 
                   <li class="mr-1 rounded-lg ">

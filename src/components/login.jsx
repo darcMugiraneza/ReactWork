@@ -1,78 +1,51 @@
 
 import '../App.css';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import NavBar from './nav';
-import Footer from './footer';
-function Login() {
-      const navigate = useNavigate();
-      const [email, setEmail] = useState("");
-      const [password, setPassword] = useState("");
-      const [userNotFound,setUserNotFound]=useState('')
-       const users = [{ email: "darcmugiraneza@gmail.com", password: "71263" }];
-    
-       const handleSubmit = (e) => {
-      e.preventDefault();
-      const account = users.find((user) => user.email === email);
-      if (account && account.password === password) {
-      navigate("/dashboard");
-      }
-else{
-    return setUserNotFound('User Not Found')
-}
-      };
+import { Component } from 'react';
 
 
- 
-  return (
+class Login extends Component {
+    render(){
+    return (
    <>
-   <NavBar/>
-  
-
     <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-16 rounded-lg shadow-2xl">
         <section>
-            <h3 class="font-bold text-2xl text-[#8B8000]">Welcome to Login</h3>
-            <p class="text-gray-600 pt-2">Sign in to your account.</p>
+            <h1 class="font-bold text-2xl text-black">Login to Mango</h1>
+           
         </section>
+        <div class="w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-white-800">
+    <div class="px-6 py-4">
+       
+        <form>
+            <div class="w-full mt-4">
+                <input class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="+250  Enter your Contact Number" />
+            </div>
 
-        <section class="mt-10">
-            <form class="flex flex-col" method="POST">
-            <div class="flex justify-end">
-                    <span class="text-sm text-red-500 hover:underline mb-6">{userNotFound}</span>
+            <div class="w-full mt-4">
+                <input class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="text" placeholder="Enter Verification Code"/>
+                <input class="block w-full px-4 py-2 mt-2 text-orange-700 placeholder-orange-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="text" placeholder="Get Verify"/>
                 </div>
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
-                    <input type="text"
-                     id="email"
-                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-[#8B8000] transition duration-500 px-3 pb-3"
-                    onChange={(e)=>setEmail(e.target.value)}
-                    />
-                </div>
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Password</label>
-                    <input type="password" 
-                    id="password" 
-                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-[#8B8000] transition duration-500 px-3 pb-3"
-                    onChange={(e)=>setPassword(e.target.value)}
-                    />
-                </div>
-                
-                <button 
-                class="bg-[#002242] hover:bg-white hover:text-[#002242] text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
-                onClick={handleSubmit} type='submit'
-                >Sign In</button>
-            </form>
-        </section>
-    </main>
 
-    <div class="max-w-lg mx-auto text-center mt-12 mb-6">
-        <p class="text-white">Don't have an account? <Link to="" class="font-bold hover:underline">Sign up</Link>.</p>
+                <button class="px-6 py-2 text-sm  font-large tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-md hover:bg-orange-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                    Verify
+                </button>
+                <div class="flex items-center justify-between mt-4">
+                <h2 class="text-sm text-blue-600 dark:text-blue-500 hover:text-blue-500 rounded-lg">Login by Service Number</h2>
+            </div>
+        </form>
     </div>
-   <Footer/>
+
+    
+</div>
+        
+                
+                
+           
+       
+    </main>
+   
    </>
   );
 }
-
+}
 
 export default Login;
